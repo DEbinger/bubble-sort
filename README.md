@@ -22,8 +22,8 @@ function bubbleSort(numArr) {
     return numArr;
 }
 
-bubbleSort(numArr);```
-
+bubbleSort(numArr);
+```
   *Best use case
   -O(n) or Linear
 
