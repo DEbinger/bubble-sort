@@ -73,3 +73,48 @@ return values;
 
 #####Worst use case
   * O(n²) or Quadratic
+
+###3. Quick Sort
+This is a comparison sorting job that uses a pivot or item to be used as a key. It sorts by putting items to the left if smaller of the pivot and to the right if larger. Keep using a pivot to sort left and right until the sort is completed.
+
+
+####Pseudo-code
+
+```javascript
+QuickSort(left, right) {
+  if (left < right) {
+    pivot = partition (a, left, right)
+    Quicksort (a, left, pivot-1)
+    Quicksort (a, pivot+1, right)
+  }
+}
+```
+
+```javascript
+function quickSort(arr)
+{
+//check array length
+if (arr.length === 0) {
+return [];
+}
+  var left = [];
+  var right = [];
+  var pivot = arr[0];
+  //this is to loop through each element in array
+  for (var i = 1; i < arr.length; i++) {
+      if (arr[i] < pivot) {
+         left.push(arr[i]);
+      } else {
+         right.push(arr[i]);
+      }
+  }
+  //returns concatenated array
+  return quickSort(left).concat(pivot, quickSort(right));
+}
+
+```
+#####Best use case
+  * O(n log n) and O(n) or Linear
+
+#####Worst use case
+  * O(n²) or Quadratic
