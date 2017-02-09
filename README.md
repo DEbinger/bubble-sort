@@ -5,6 +5,7 @@
 
 ####Pseudo-code
 
+```javascript
 bubblesort(array)
   passes = 1;
     if (passes < array.length) {
@@ -12,6 +13,7 @@ bubblesort(array)
         swap of array if they are out of order;
       passes++;
   }
+```
 
 ```javascript
 function bubbleSort(numArr) {
