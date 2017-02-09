@@ -1,7 +1,8 @@
-##There are many algorithms that deal with sorting collections of data. One of the most basic forms of sorting is known as Bubble Sort and is named by it's nature of the order of data having a "bubbling" effect as a collection of data is sorted. We will start off by implementing a Bubble Sort algorithm on a one-dimensional Array.
+##There are many algorithms that deal with sorting collections of data. I will be going over a few examples.
 
-##1.Bubble Sort
-  This is a sorting algorithm that repeatedly goes through
+####1.Bubble Sort
+  This is a simple sorting algorithm that repeatedly goes through a list. It will compare items, then swaps the items if it is in the incorrect order. It will continue to go through the list until no incorrect items exists. Then it will go through the list one last time to complete.
+
    * Unordered sub-list.
 1. Actual numbers don't matter, just that it's a number
    * Ordered sub-list
