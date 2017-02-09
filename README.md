@@ -5,6 +5,14 @@
 
 ####Pseudo-code
 
+bubblesort(array)
+  passes = 1;
+    if (passes < array.length) {
+      for (i = 0; i < array.length; i++)
+        swap of array if they are out of order;
+      passes++;
+  }
+
 ```javascript
 function bubbleSort(numArr) {
   var sortNum;
@@ -25,9 +33,9 @@ function bubbleSort(numArr) {
 bubbleSort(numArr);
 ```
 #####Best use case
-  * ###### O(n) or Linear
+  * O(n) or Linear
 
 #####Worst use case
-  * ###### O(n²)
+  * O(n²)
 
 ###2. Insertion Sort
