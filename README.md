@@ -24,10 +24,10 @@ function bubbleSort(numArr) {
 
 bubbleSort(numArr);
 ```
-  * Best use case
-  - O(n) or Linear
+  * #####Best use case
+  - ######O(n) or Linear
 
-  * Worst use case
-  - O(n²)
+  * #####Worst use case
+  - ######O(n²)
 
 ####2. Insertion Sort
