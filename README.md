@@ -186,11 +186,11 @@ function selectionSort(array){
 
 ```
 #####Best use case
-* O(n log n) and O(n) or Linear
+* O(n²) or Quadratic
 
-######When the pivot selected is in the middle of list.
+######When memory is limited
 
 #####Worst use case
 * O(n²) or Quadratic
 
-######Dependant on pivot selection. If pivot is too large or too small on list.
+######Large lists
