@@ -34,11 +34,13 @@ function bubbleSort(numArr) {
 
 bubbleSort(numArr);
 ```
-Best use case
-  * O(n) or Linear. A list that is already sorted.
+#####Best use case
+  * O(n) or Linear
+######A list that is already sorted
 
-Worst use case
-  * O(n²) or Quadratic. When a list is large.
+#####Worst use case
+  * O(n²) or Quadratic
+######When a list is large
 
 
 ###2. Insertion Sort
@@ -70,11 +72,13 @@ return values;
 }
 
 ```
-Best use case
-* O(n) or Linear and O(1) or Constant. A list that is already sorted
+#####Best use case
+* O(n) or Linear and O(1) or Constant
+######A list that is already sorted
 
-Worst use case
-* O(n²) or Quadratic. A list that is the reverse of final outcome
+#####Worst use case
+* O(n²) or Quadratic
+######A list that is the reverse of final outcome
 
 
 ###3. Quick Sort
@@ -117,11 +121,13 @@ return [];
 }
 
 ```
-Best use case
-* O(n log n) and O(n) or Linear. When the pivot selected is in the middle of list.
+#####Best use case
+* O(n log n) and O(n) or Linear
+######When the pivot selected is in the middle of list.
 
-Worst use case
-* O(n²) or Quadratic. Dependant on pivot selection. If pivot is too large or too small on list.
+#####Worst use case
+* O(n²) or Quadratic
+######Dependant on pivot selection. If pivot is too large or too small on list.
 
 ---------------------------------------------------------------------------------------------------------------------------------
 ###4. Selection Sort
