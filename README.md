@@ -135,21 +135,33 @@ return [];
 
 ######Dependant on pivot selection. If pivot is too large or too small on list.
 
----------------------------------------------------------------------------------------------------------------------------------
+
 ###4. Selection Sort
-This is a comparison sorting job that uses a pivot or item to be used as a key. It sorts by putting items to the left if smaller of the pivot and to the right if larger. Keep using a pivot to sort left and right until the sort is completed.
+This is a sort where take the smallest entry from the unsorted portion of a list and build a sorted list at the front, entry by entry.
 
 
 ####Pseudo-code example
 
 ```javascript
-QuickSort(left, right) {
-  if (left < right) {
-    pivot = partition (a, left, right)
-    Quicksort (a, left, pivot-1)
-    Quicksort (a, pivot+1, right)
-  }
-}
+func selectionSort(array)
+    max = length(array) - 1
+
+    for i from 0 to max
+        key = array[i]
+        keyj = i
+
+        for j from i+1 to max
+            if array[j] < key
+                key = array[j]
+                keyj = j
+
+        array[keyj] = array[i]
+        array[i] = key
+
+    return array
+
+end func
+
 ```
 
 ####Javascript example
@@ -171,6 +183,7 @@ function selectionSort(array){
   }
   return array;
 }
+
 ```
 #####Best use case
 * O(n log n) and O(n) or Linear
