@@ -194,3 +194,84 @@ function selectionSort(array){
 * O(n²) or Quadratic
 
 ######Large lists
+
+
+---------------------------------------------------------------------
+###5. Merge Sort
+This sorting job that breaks up a list into two smaller lists of close to the same size, then combines them until it can not divide anymore.
+
+
+####Pseudo-code example
+
+```javascript
+func mergesort( var a as array )
+     var l1 as array = a[0] ... a[n/2]
+     var l2 as array = a[n/2+1] ... a[n]
+
+     l1 = mergesort( l1 )
+     l2 = mergesort( l2 )
+
+     return merge( l1, l2 )
+end func
+
+func merge( var a as array, var b as array )
+     var c as array
+
+     while ( a and b have elements )
+          if ( a[0] > b[0] )
+               add b[0] to the end of c
+               remove b[0] from b
+          else
+               add a[0] to the end of c
+               remove a[0] from a
+     while ( a has elements )
+          add a[0] to the end of c
+          remove a[0] from a
+     while ( b has elements )
+          add b[0] to the end of c
+          remove b[0] from b
+     return c
+end func
+
+```
+
+####Javascript example
+```javascript
+function mergeSort(array){
+   var len = array.length;
+   if(len <2)
+      return array;
+   var mid = Math.floor(len/2),
+       left = array.slice(0,mid),
+       right =array.slice(mid);
+   return merge(mergeSort(left),mergeSort(right));
+}
+
+function merge(left, right){
+  var result = [],
+      lLen = left.length,
+      rLen = right.length,
+      l = 0,
+      r = 0;
+  while(l < lLen && r < rLen){
+     if(left[l] < right[r]){
+       result.push(left[l++]);
+     }
+     else{
+       result.push(right[r++]);
+    }
+  }
+  return result.concat(left.slice(l)).concat(right.slice(r));
+}
+
+
+```
+#####Best use case
+* O(n log n) and O(n) or Linear
+
+######not completed
+
+#####Worst use case
+* O(n log n)
+
+######Best case for insertion sort
