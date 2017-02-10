@@ -3,7 +3,7 @@
 ###1. Bubble Sort
 This is a simple sorting job that will repeatedly go through a list of items. It will compare items in the list, then swaps the items if it is in the wrong order. It will keep going through the list until no wrong items are there. Then it will through the list one last time and this will finish the job.
 
-####Pseudo-code
+####Pseudo-code example
 
 ```javascript
 bubblesort(array)
@@ -14,7 +14,7 @@ bubblesort(array)
       passes++;
   }
 ```
-
+####Javascript example
 ```javascript
 function bubbleSort(numArr) {
   var sortNum;
@@ -36,14 +36,17 @@ bubbleSort(numArr);
 ```
 #####Best use case
   * O(n) or Linear
+######A list that is already sorted
 
 #####Worst use case
   * O(n²) or Quadratic
+#######When a list is large
+
 
 ###2. Insertion Sort
 This is a simple soting job that makes a list of items one at a time. It is good for smaller lists of items. Sorting is done in-place with the items being stored and checks the item against largest item. If current item is larger it stays in place otherwise if moves down the list to move into the right space.
 
-####Pseudo-code
+####Pseudo-code example
 
 ```javascript
 insertionsort(values){
@@ -53,6 +56,7 @@ insertionsort(values){
   }
 ```
 
+####Javascript example
 ```javascript
 function sort(values) {
   var length = values.length;
@@ -70,15 +74,18 @@ return values;
 ```
 #####Best use case
   * O(n) or Linear and O(1) or Constant
+#######A list that is already sorted
 
 #####Worst use case
   * O(n²) or Quadratic
+#######A list that is the reverse of final outcome
+
 
 ###3. Quick Sort
 This is a comparison sorting job that uses a pivot or item to be used as a key. It sorts by putting items to the left if smaller of the pivot and to the right if larger. Keep using a pivot to sort left and right until the sort is completed.
 
 
-####Pseudo-code
+####Pseudo-code example
 
 ```javascript
 QuickSort(left, right) {
@@ -90,6 +97,7 @@ QuickSort(left, right) {
 }
 ```
 
+####Javascript example
 ```javascript
 function quickSort(arr)
 {
@@ -115,6 +123,54 @@ return [];
 ```
 #####Best use case
   * O(n log n) and O(n) or Linear
+#######When the pivot selected is in the middle of list.
 
 #####Worst use case
   * O(n²) or Quadratic
+#######Dependant on pivot selection. If pivot is too large or too small on list.
+
+---------------------------------------------------------------------------------------------------------------------------------
+###4. Selection Sort
+This is a comparison sorting job that uses a pivot or item to be used as a key. It sorts by putting items to the left if smaller of the pivot and to the right if larger. Keep using a pivot to sort left and right until the sort is completed.
+
+
+####Pseudo-code example
+
+```javascript
+QuickSort(left, right) {
+  if (left < right) {
+    pivot = partition (a, left, right)
+    Quicksort (a, left, pivot-1)
+    Quicksort (a, pivot+1, right)
+  }
+}
+```
+
+####Javascript example
+```javascript
+function selectionSort(array){
+  let min;
+  let temp;
+  let len = array.length;
+  for(var i = 0; i < len; i++){
+    min = i;
+    for(var  j = i+1; j<len; j++){
+      if(array[j]<array[min]){
+        min = j;
+      }
+    }
+    temp = array[i];
+    array[i] = array[min];
+    array[min] = temp;
+  }
+  return array;
+}
+```
+#####Best use case
+  * O(n log n) and O(n) or Linear
+#######When the pivot selected is in the middle of list.
+
+#####Worst use case
+  * O(n²) or Quadratic
+#######Dependant on pivot selection. If pivot is too large or too small on list.
+
